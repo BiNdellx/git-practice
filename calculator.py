@@ -8,6 +8,8 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
+    if b == 0:
+        return "cannot divided by zero"
     return a / b
 
 print(add(10, 5))
