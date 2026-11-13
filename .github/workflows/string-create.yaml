@@ -1,0 +1,13 @@
+name: String Creation Example
+on: workflow_dispatch
+jobs:
+  string-create:
+    runs-on: ubuntu-latest
+    steps:
+      - name: String Creation Test
+        env:
+          RESULT_FORMAT_1: ${{ format('Hello {0}', 'Github') }}
+          RESULT_FORMAT_2: ${{ format('{0} {1}', 'Hello', 'World') }}
+          RESULT_FORMAT_3: ${{ format('Name: {0}, Age: {1}, 'Kim', 20) }}
+
+        run: printenv | grep '^RESULT_' | sort
