@@ -1,0 +1,17 @@
+name: String Function Example
+on: workflow_dispatch
+jobs:
+  string-function:
+    runs-on: ubuntu-latest
+    steps:
+      - name: String Comparison Test
+        env:
+          TEST_CONTAINS_1: ${{ contains('Hello Github', 'Git') }}
+          TEST_CONTAINS_2: ${{ contains('Hello Github', 'Python') }}
+          TEST_STARTSWITH_1: ${{ startsWith('Hello Github', 'Hello') }}
+          TEST_STARTSWITH_2: ${{ startsWith('Hello Github', 'Git') }}
+          TEST_ENDSWITH_1: ${{ endsWith('Hello Github', 'Github') }}
+          TEST_ENDSWITH_2: ${{ endsWith('Hello Github', 'Hello') }}
+          TEST_CASE: ${{ contains('Hello Github', 'github') }}
+
+        run: printenv | grep '^TEST_' | sort
