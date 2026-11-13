@@ -18,3 +18,15 @@ jobs:
           echo "Greater Equal ${{ 10 >= 10 }}"
           echo "Less Equal ${{ 10 <= 20 }}"
           echo "Type Error ${{ false == 1 }}"
+
+      - name: Grouping
+        run: |
+          echo "Group 1: ${{ (true || false) && false }}"
+          echo "Group 2: ${{ true || (false && false) }}"
+          echo "Group 3: ${{ (10 > 5) && (20 > 10) }}"
+
+      - name: Index
+        run: |
+          echo "First: ${{ fromJSON('["Apple","Banana","Cherry"]')[0] }}"
+          echo "Second: ${{ fromJSON('["Apple","Banana","Cherry"]')[1] }}"
+          echo "Third: ${{ fromJSON('["Apple","Banana","Cherry"]')[2] }}"
