@@ -9,4 +9,12 @@ jobs:
           echo "AND: ${{ true && false }}"
           echo "OR: ${{ true || false }}"
           echo "NOT: ${{ !true }}"
-          
+      - name: Comparison Operator
+        run: |
+          echo "Equal: ${{ 10 == 10 }}"
+          echo "Not Equal: ${{ 10 != 20 }}"
+          echo "Greater: ${{ 10 > 5 }}"
+          echo "Less: ${{ 10 < 5 }}"
+          echo "Greater Equal ${{ 10 >= 10 }}"
+          echo "Less Equal ${{ 10 <= 20 }}"
+          echo "Type Error ${{ false == 1 }}"
