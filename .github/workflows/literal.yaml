@@ -1,5 +1,5 @@
 name: Literal Example
-on: worflow_dispatch
+on: workflow_dispatch
 jobs:
   literal:
     runs-on: ubuntu-latest
