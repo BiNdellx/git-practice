@@ -1,4 +1,5 @@
 import pytest
+
 from orderlab.pricing import subtotal
 
 def test_subtotal_normal():
