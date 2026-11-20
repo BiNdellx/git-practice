@@ -2,6 +2,7 @@ import pytest
 
 from orderlab.pricing import final_total, subtotal
 
+
 def test_subtotal_normal():
     assert subtotal(10_000, 2) == 20_000
 
